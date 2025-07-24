@@ -49,7 +49,7 @@ app.use(
 app.use(flash());
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(
+  app.use(
   "/uploads",
   express.static(path.join(__dirname, "public", "uploads"), {
     setHeaders: (res, path) => {

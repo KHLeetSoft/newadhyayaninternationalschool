@@ -94,7 +94,7 @@ const loginAdmin = async (req, res) => {
       return res.status(401).json({ error: 'Account is inactive' });
     }
 
-    JWT_SECRET="ADHAYANINTERNATIONALLLLLLLLLLLL"
+    JWT_SECRET="STALPHONSACHARAMAAAAAAA"
 
     const token = jwt.sign({ _id: admin._id.toString() }, JWT_SECRET);
     admin.tokens = admin.tokens.concat({ token });

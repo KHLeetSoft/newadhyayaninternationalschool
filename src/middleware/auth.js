@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const Admin = require("../models/Admin");
 
-JWT_SECRET="ADHAYANINTERNATIONALLLLLLLLLLLL"
+JWT_SECRET="STALPHONSACHARAMAAAAAAA"
 const auth = async (req, res, next) => {
   try {
     const token =

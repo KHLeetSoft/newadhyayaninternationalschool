@@ -5,20 +5,14 @@ const aboutController = require("../controllers/aboutController");
 const upload = require("../middleware/fileUpload");
 const auth = require("../middleware/auth");
 
+// =========================
+// PUBLIC ABOUT ROUTES
+// Includes public About and Vision-Mission pages
+// =========================
 // Public route for viewing about page
 router.get("/", aboutController.getAboutPage);
 
 // Public route for viewing vision-mission page
-router.get("/vision-mission", aboutController.getVisionMissionPage);
-
-// Admin routes for managing about content
-router.get("/admin/about/edit", auth, aboutController.getAdminAboutEdit);
-router.get("/admin/vision-mission", auth, aboutController.getAdminVisionMission);
-router.post(
-  "/admin/about/update",
-  auth,
-  upload.single("image"),
-  aboutController.updateAboutContent
-);
+router.get("/vision-mission", aboutController.getVisionMissionPage);   /// this is the vision and mission page
 
 module.exports = router;
