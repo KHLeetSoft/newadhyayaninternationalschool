@@ -49,19 +49,16 @@ app.use(
 app.use(flash());
 
 app.use(express.static(path.join(__dirname, "public")));
-  app.use(
-  "/uploads",
-  express.static(path.join(__dirname, "public", "uploads"), {
-    setHeaders: (res, path) => {
-      // Add cache-busting headers for uploaded files
-      res.set({
-        "Cache-Control": "no-cache, no-store, must-revalidate",
-        Pragma: "no-cache",
-        Expires: "0",
-      });
-    },
-  })
-);
+app.use("/uploads", express.static(path.join(__dirname, "public", "uploads"), {
+  setHeaders: (res, path) => {
+    // Add cache-busting headers for uploaded files
+    res.set({
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0'
+    });
+  }
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
