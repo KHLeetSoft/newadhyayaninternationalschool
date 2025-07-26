@@ -38,7 +38,7 @@ const models = {
 
 async function seedDemoData() {
   // const MONGO_URI = process.env.MONGO_URI;
-  const MONGO_URI = "mongodb+srv://innovationleetsoft:Leethesh@cluster0.jxywvn1.mongodb.net/stalphonsacharama1?retryWrites=true&w=majority";
+  const MONGO_URI = "mongodb+srv://innovationleetsoft:Leethesh@cluster0.sq6r6rg.mongodb.net/adhayayaninternational?retryWrites=true&w=majority&appName=Cluster0";
   if (!MONGO_URI) {
     console.error('MONGO_URI not found. Exiting.');
     process.exit(1);
@@ -95,13 +95,13 @@ async function seedDemoData() {
     // HomeContent
     if (!(await models.HomeContent.findOne())) {
       await models.HomeContent.create({
-        welcomeTitle: 'Welcome to Adhyayan International School',
+        welcomeTitle: 'Welcome to Adhyayan international school',
         welcomeContent: 'A place of learning, growth, and excellence.',
         bannerSlides: [
           { title: 'Our Campus', imageUrl: '/public/uploads/sample1.jpg', contentType: 'image' },
           { title: 'Annual Day', imageUrl: '/public/uploads/sample2.jpg', contentType: 'image' }
         ],
-        history: 'Founded in 1990, Adhyayan International School has a rich tradition...',
+        history: 'Founded in 1990, Adhyayan international school has a rich tradition...',
         featuredSections: [
           { title: 'Academics', content: 'World-class curriculum and faculty.' },
           { title: 'Sports', content: 'State-of-the-art sports facilities.' }
@@ -117,8 +117,8 @@ async function seedDemoData() {
     // About
     if (!(await models.About.findOne())) {
       await models.About.create({
-        title: 'About Adhyayan International School',
-        content: 'Adhyayan International School is committed to academic excellence and character development.',
+        title: 'About Adhyayan international school',
+        content: 'Adhyayan international school is committed to academic excellence and character development.',
         vision: 'To nurture responsible citizens.',
         mission: 'To provide quality education to all.'
       });

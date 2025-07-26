@@ -52,7 +52,7 @@ adminSchema.pre("save", async function (next) {
   }
   next();
 });
-JWT_SECRET="STALPHONSACHARAMAAAAAAA"
+JWT_SECRET="ADHAYANINTERNATIONALLLLLLLLLLLL"
 // Generate auth token
 adminSchema.methods.generateAuthToken = async function () {
   const admin = this;

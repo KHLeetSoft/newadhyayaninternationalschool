@@ -41,7 +41,7 @@ SESSION_SECRET="ADHAYANINTERNATIONALLLLLLLLLLLL"
 // Session and flash configuration
 app.use(
   session({
-    secret: SESSION_SECRET || "your-secret-key",
+    secret: SESSION_SECRET || "ADHAYANINTERNATIONALLLLLLLLLLLL",
     resave: false,
     saveUninitialized: false,
   })
